@@ -4,5 +4,6 @@ def dot_product(x: list, y: list) -> float:
     """
     Returns the dot product as a float.
     """
-    result = np.dot(x, y)
-    return float(result)
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
+    return float(np.dot(x,  y))
